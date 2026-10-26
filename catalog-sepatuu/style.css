@@ -1,0 +1,73 @@
+.description-button {
+	grid-column: 1 / -1;
+	justify-self: start;
+	margin-top: 5px;
+	padding: 0 0 4px;
+	border: 0;
+	border-bottom: 1px solid #cfc3c7;
+	color: #51474b;
+	background: transparent;
+	font-size: 10px;
+	cursor: pointer;
+}
+
+.description-button:hover,
+.description-button:focus-visible {
+	border-color: var(--pink-dark);
+	color: var(--pink-dark);
+}
+
+.product-dialog {
+	width: min(440px, calc(100% - 32px));
+	padding: 0;
+	border: 1px solid var(--line);
+	color: var(--ink);
+	background: var(--paper);
+	box-shadow: 0 20px 70px rgba(41, 35, 38, .2);
+}
+
+.product-dialog::backdrop {
+	background: rgba(41, 35, 38, .48);
+	backdrop-filter: blur(3px);
+}
+
+.dialog-content {
+	position: relative;
+	padding: 38px 34px 32px;
+}
+
+.dialog-close {
+	position: absolute;
+	top: 12px;
+	right: 13px;
+	width: 34px;
+	height: 34px;
+	border: 0;
+	border-radius: 50%;
+	color: var(--ink);
+	background: var(--blush);
+	font-size: 24px;
+	line-height: 1;
+	cursor: pointer;
+}
+
+.dialog-content .eyebrow { margin-bottom: 8px; }
+.dialog-content h2 { margin: 0 32px 12px 0; font-family: "Playfair Display", Georgia, serif; font-size: 30px; font-weight: 500; }
+.dialog-description { margin-bottom: 20px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+.dialog-sizes { min-width: 0; margin: 0 0 20px; padding: 0; border: 0; }
+.dialog-sizes legend { margin-bottom: 9px; font-size: 11px; font-weight: 600; }
+.size-options { display: flex; flex-wrap: wrap; gap: 7px; }
+.size-options label { position: relative; cursor: pointer; }
+.size-options input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.size-options span { display: grid; place-items: center; min-width: 36px; height: 34px; border: 1px solid var(--line); color: var(--ink); font-size: 11px; transition: .2s ease; }
+.size-options input:checked + span { border-color: var(--pink-dark); color: #fff; background: var(--pink-dark); }
+.size-options input:focus-visible + span { outline: 2px solid var(--pink-dark); outline-offset: 2px; }
+.dialog-price { margin: 0; color: var(--pink-dark); font-size: 15px; font-weight: 700; }
+.buy-now-button { width: 100%; min-height: 42px; margin-top: 20px; border: 0; color: #fff; background: var(--ink); font: inherit; font-size: 12px; cursor: pointer; transition: background .2s ease; }
+.buy-now-button:hover { background: var(--pink-dark); }
+.buy-now-button:focus-visible { outline: 2px solid var(--pink-dark); outline-offset: 3px; }
+
+@media (max-width: 480px) {
+	.dialog-content { padding: 34px 24px 26px; }
+	.dialog-content h2 { font-size: 26px; }
+}
